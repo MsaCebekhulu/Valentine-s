@@ -92,14 +92,14 @@
         .photo-frame:nth-child(even) { transform: rotate(2deg); }
         .photo-frame:hover { transform: rotate(0deg) scale(1.05); z-index: 5; }
 
-                .photo-frame img { 
+  .photo-frame img { 
             width: 100%; 
-            height: 300px; 
-            /* Changed from cover to contain so the whole person is visible */
-            object-fit: contain; 
-            /* This adds a light background in case the photo is a different shape */
-            background-color: #f9f9f9; 
-            display: block;
+            height: 350px; 
+            /* 1. Fill the box completely */
+            object-fit: cover; 
+            /* 2. Anchor the crop to the top of the image */
+            object-position: top; 
+            background-color: #fcfcfc; 
         }
 
         .photo-caption {
@@ -188,6 +188,7 @@
 </body>
 
 </html>
+
 
 
 
