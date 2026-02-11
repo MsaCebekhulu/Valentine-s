@@ -92,10 +92,13 @@
         .photo-frame:nth-child(even) { transform: rotate(2deg); }
         .photo-frame:hover { transform: rotate(0deg) scale(1.05); z-index: 5; }
 
-        .photo-frame img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+                .photo-frame img { 
+            width: 100%; 
+            height: 300px; 
+            /* Changed from cover to contain so the whole person is visible */
+            object-fit: contain; 
+            /* This adds a light background in case the photo is a different shape */
+            background-color: #f9f9f9; 
             display: block;
         }
 
@@ -154,12 +157,12 @@
             
             <div class="photo-frame">
                 <img src="Us.jpg" alt="Memory 2">
-                <div class="photo-caption">Our first trip</div>
+                <div class="photo-caption">Beauty</div>
             </div>
 
             <div class="photo-frame">
                 <img src="BestMoment.HEIC" alt="Memory 3">
-                <div class="photo-caption">Laughing together</div>
+                <div class="photo-caption">Chilling together</div>
             </div>
         </div>
 
@@ -185,5 +188,6 @@
 </body>
 
 </html>
+
 
 
